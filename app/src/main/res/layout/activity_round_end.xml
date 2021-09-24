@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/layoutas"
+    android:focusableInTouchMode="true"
+    tools:context=".RoundEndActivity">
+
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200">
+
+            <TextView
+                android:id="@+id/team_name_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="Team Name"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/round_points_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="Round Pts"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/total_points_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="Total Pts"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/first_team_name"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/first_team_round_points"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:gravity="center_horizontal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/first_team_total_points"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:gravity="center_horizontal"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/second_team_name"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/second_team_round_points"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:gravity="center_horizontal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/second_team_total_points"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:padding="10sp"
+                android:text="TextView"
+                android:gravity="center_horizontal"
+                android:textSize="14sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/whos_turn_will_be_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Good job! Next round?"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:layout_editor_absoluteX="131dp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/round_window_correct_words_results_text"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/next_round_button_round_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Next Round"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whos_turn_will_be_next" />
+
+    <TextView
+        android:id="@+id/round_window_correct_words_results_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Correct words:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_round_button_round_window" />
+
+    <TextView
+        android:id="@+id/round_window_incorrect_words_results_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Incorrect words: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list" />
+
+    <ListView
+        android:id="@+id/round_window_incorrect_words_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/round_window_incorrect_words_results_text"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

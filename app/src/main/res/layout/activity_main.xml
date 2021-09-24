@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/home_toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/guess_the_word_window"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Are You Ready?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_member_turn" />
+
+    <Button
+        android:id="@+id/skip_word_button"
+        android:layout_width="238dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="SKIP"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correct_word_button" />
+
+    <Button
+        android:id="@+id/correct_word_button"
+        android:layout_width="238dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="#3AB83F"
+        android:text="CORRECT"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_the_word_window" />
+
+    <Button
+        android:id="@+id/next_round_button"
+        android:layout_width="238dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#444444"
+        android:text="for fast testing"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skip_word_button" />
+
+    <TextView
+        android:id="@+id/countdown_timer_time"
+        android:layout_width="105dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
+        android:text="60 s."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/correct_word_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_the_word_window"
+        app:layout_constraintVertical_bias="0.622" />
+
+    <Button
+        android:id="@+id/countdown_timer_button"
+        android:layout_width="133dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="21dp"
+        android:text="GO!"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/correct_word_button"
+        app:layout_constraintEnd_toStartOf="@+id/countdown_timer_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess_the_word_window"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/team_member_turn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
